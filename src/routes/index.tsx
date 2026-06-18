@@ -9,6 +9,10 @@ import heroImg from "@/assets/hero-pipes.jpg";
 import heroPvc from "@/assets/hero-pvc.jpg";
 import heroEpdm from "@/assets/hero-epdm.jpg";
 import factoryImg from "@/assets/factory.jpg";
+import certNew1 from "@/assets/certs/image.png";
+import certNew2 from "@/assets/certs/image copy.png";
+import certNew3 from "@/assets/certs/image copy 2.png";
+
 
 // Dynamically import all partner images from assets/partners
 const partnerImagesGlob = import.meta.glob("../assets/partners/*.{png,jpg,jpeg,svg,webp}", {
@@ -26,7 +30,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Pro Technology — Foam, PVC, EPDM & Industrial Components" },
-      { name: "description", content: "Leading manufacturer of foam, PVC compounds, sleeves, EPDM gaskets, automotive parts and industrial components. Engineering strength, delivering precision." },
+      { name: "description", content: "Leading manufacturer of foam, sleeves, EPDM gaskets, automotive parts and industrial components. Engineering strength, delivering precision." },
       { property: "og:title", content: "Pro Technology" },
       { property: "og:description", content: "Trusted manufacturer of industrial foam, PVC, EPDM and automotive components." },
     ],
@@ -40,28 +44,27 @@ const fadeUp = {
   viewport: { once: true, amount: 0.2 },
   transition: { duration: 0.6 },
 };
-
 const slides = [
   {
     img: heroImg,
     eyebrow: "Trusted Since 2005",
     title: "Your Trusted Partner for ",
     highlight: "Industrial Components",
-    desc: "Premium foam, PVC compounds, EPDM gaskets, sleeves and automotive parts. Engineered in India, delivered worldwide.",
+    desc: "Premium foam, EPDM gaskets, sleeves and automotive parts. Engineered in India, delivered worldwide.",
     cta: { label: "Explore Products", to: "/products" as const },
   },
   {
-    img: heroPvc,
+    img: "https://i.pinimg.com/1200x/76/43/c7/7643c70fdc36860fb38a7a2e2f8ab18b.jpg",
     eyebrow: "Precision Manufacturing",
     title: "High-Performance ",
-    highlight: "PVC Compounds",
-    desc: "Custom-formulated PVC compounds in every color and grade — built for cables, automotive, and electrical applications.",
-    cta: { label: "View PVC Range", to: "/products" as const },
+    highlight: "Injection molding component & rubber component ",
+    desc: "Custom-formulated PVC sleeves in every color and grade — built for cables, automotive, and electrical applications.",
+    cta: { label: "View Sleeve Range", to: "/products" as const },
   },
   {
     img: heroEpdm,
     eyebrow: "Engineered for Durability",
-    title: "EPDM Seals, Sleeves & ",
+    title: "EPDM Seals & PVC Sleeve Solutions ",
     highlight: "Foam Solutions",
     desc: "Weather-resistant EPDM gaskets, sleeves, foam protectors and OEM components trusted by leading manufacturers.",
     cta: { label: "Discover More", to: "/products" as const },
@@ -111,7 +114,7 @@ function Hero() {
                 {slide.cta.label} <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
+            {/* <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
               {[
                 { v: "20+", l: "Years Experience" },
                 { v: "30,000+", l: "Products Delivered" },
@@ -122,7 +125,7 @@ function Hero() {
                   <div className="text-[10px] text-primary-foreground/70 mt-0.5">{s.l}</div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -169,10 +172,10 @@ function Home() {
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-brand font-semibold uppercase text-sm tracking-wider">Our Range</p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Our Product Categories</h2>
-            <p className="text-muted-foreground mt-3">From foam and PVC compounds to precision EPDM seals — explore our complete catalog of industrial-grade components.</p>
+            <p className="text-muted-foreground mt-3">From foam and sleeves to precision EPDM seals — explore our complete catalog of industrial-grade components.</p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {categories.slice(0, 8).map((c, i) => {
+            {categories.slice(0, 4).map((c, i) => {
               const fallbacks = [heroImg, heroPvc, heroEpdm, factoryImg];
               const imgs = (c.products
                 .map((p) => p.image)
@@ -214,13 +217,17 @@ function Home() {
         <div className="container-page grid md:grid-cols-2 gap-12 items-center">
           <motion.img {...fadeUp} src={factoryImg} alt="Our manufacturing facility" loading="lazy" width={1280} height={800} className="rounded-2xl shadow-xl" />
           <motion.div {...fadeUp}>
-            <p className="text-brand font-semibold uppercase text-sm tracking-wider">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Why Pro Technology?</h2>
-            <p className="text-muted-foreground mt-3">
-              Based in Pune, India, Pro Technology is a leading manufacturer of high-quality industrial components. We combine modern technology, premium raw materials, and decades of expertise to deliver reliable, cost-effective solutions.
+            <p className="text-brand font-semibold uppercase text-sm tracking-wider">About Pro Technology</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Engineering Strength. Delivering Precision.</h2>
+            <p className="text-muted-foreground mt-4 leading-relaxed text-sm md:text-base">
+              Pro Technology is a professionally managed manufacturer of all types of Molds, including Injection molds, Die Casting molds, and Rubber Compression Molds.
+              Our manufacturing plants (Unit 1 & Unit 2) are located in the industrial town of <strong>Khushkhera, Bhiwadi, Rajasthan</strong>.
             </p>
-            <ul className="space-y-3 mt-8">
-              {["ISO 9001:2015 Certified Manufacturer","In-house R&D and Quality Lab","On-time delivery across India & exports","Custom formulations & OEM solutions"].map((t) => (
+            <p className="text-muted-foreground mt-3 leading-relaxed text-sm md:text-base">
+              Backed by strong technical know-how, state-of-the-art infrastructure, and a reliable vendor base, we serve a prominent customer base including Toyota, Honda 2W, Suzuki Power Train, Yamaha, Hero MotoCorp, MSIL, TVS, and Bajaj.
+            </p>
+            <ul className="space-y-3 mt-6">
+              {["ISO 9001:2015 Certified Manufacturer", "In-house R&D and Quality Lab", "On-time delivery across India & exports", "Custom formulations & OEM solutions"].map((t) => (
                 <li key={t} className="flex gap-3 items-start">
                   <CheckCircle2 className="h-5 w-5 text-brand mt-0.5 flex-shrink-0" />
                   <span className="text-foreground">{t}</span>
@@ -272,40 +279,6 @@ function Home() {
       </section>
 
 
-      {/* Industries */}
-      <section className="py-20">
-        <div className="container-page">
-          <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-brand font-semibold uppercase text-sm tracking-wider">Industries</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Industries We Serve</h2>
-            <p className="text-muted-foreground mt-3">Our components power applications across a wide range of industries.</p>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
-            {[
-              { icon: Wrench, label: "Automotive" },
-              { icon: Sprout, label: "Agriculture" },
-              { icon: Building2, label: "Construction" },
-              { icon: Zap, label: "Electrical & Telecom" },
-              { icon: Truck, label: "Packaging" },
-            ].map((i, idx) => (
-              <motion.div
-                key={i.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.07 }}
-                className="rounded-xl border border-border bg-card p-6 text-center hover:border-brand hover:shadow-lg transition-all"
-              >
-                <div className="mx-auto h-14 w-14 rounded-full bg-brand/10 text-brand flex items-center justify-center mb-3">
-                  <i.icon className="h-7 w-7" />
-                </div>
-                <div className="font-semibold text-primary">{i.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Certificates Preview */}
       <section className="py-20 bg-secondary/40">
         <div className="container-page">
@@ -313,40 +286,25 @@ function Home() {
             <p className="text-brand font-semibold uppercase text-sm tracking-wider">Quality Assured</p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Our Certifications</h2>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {["ISO 9001:2015", "ISO 14001", "MSME Certified", "Make in India"].map((c) => (
-              <div key={c} className="rounded-xl bg-card border border-border p-8 text-center hover:shadow-lg transition-shadow">
-                <Award className="h-12 w-12 text-brand mx-auto mb-3" />
-                <div className="font-bold text-primary">{c}</div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { title: "Quality Certificate", image: certNew1 },
+              { title: "MSME Certificate", image: certNew2 },
+              { title: "Quality System Certificate", image: certNew3 }
+            ].map((c) => (
+              <Link key={c.title} to="/certificates" className="group block rounded-xl bg-card border border-border overflow-hidden hover:border-brand hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="aspect-[3/4] bg-white overflow-hidden p-4">
+                  <img src={c.image} alt={c.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-4 border-t border-border text-center">
+                  <div className="font-bold text-primary text-sm group-hover:text-brand transition-colors">{c.title}</div>
+                </div>
+              </Link>
             ))}
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <Link to="/certificates" className="text-brand font-semibold hover:underline">View All Certificates →</Link>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section
-        className="relative py-20 text-primary-foreground bg-cover bg-center"
-        style={{ backgroundImage: `url(${factoryImg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary/75" />
-        <div className="container-page text-center relative z-10">
-          <motion.div {...fadeUp}>
-            <Shield className="h-12 w-12 text-brand mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-extrabold">Ready to start your next project?</h2>
-            <p className="mt-3 text-primary-foreground/80 max-w-xl mx-auto">Get a custom quote for your industrial component requirements. Our team responds within 24 hours.</p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-brand px-7 py-3 font-semibold text-brand-foreground hover:bg-brand-dark transition-colors shadow-lg">
-                <Phone className="h-4 w-4" /> Contact Us
-              </Link>
-              <Link to="/products" className="inline-flex items-center gap-2 rounded-md bg-white/10 px-7 py-3 font-semibold border border-white/20 hover:bg-white/20 transition-colors">
-                Browse Catalog
-              </Link>
-            </div>
-          </motion.div>
         </div>
       </section>
     </Layout>
@@ -376,12 +334,11 @@ function CategoryImageCycler({ images, alt, offset = 0 }: { images: string[]; al
           src={src}
           alt={alt}
           loading="lazy"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-            idx === i ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 h-full w-full object-contain p-4 bg-secondary transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"
+            }`}
         />
       ))}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent pointer-events-none" />
     </div>
   );
 }

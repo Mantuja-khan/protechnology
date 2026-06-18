@@ -51,14 +51,14 @@ function Products() {
                   >
                     <Link to="/products/$slug" params={{ slug: p.slug }} className="group block rounded-xl border border-border bg-card overflow-hidden hover:border-brand hover:shadow-xl transition-all hover:-translate-y-1">
                       <div className="aspect-square bg-secondary relative overflow-hidden">
-                        <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
                           <span className="text-primary-foreground text-sm font-semibold flex items-center gap-1">View Details <ArrowRight className="h-3 w-3" /></span>
                         </div>
                       </div>
                       <div className="p-4">
                         <h3 className="font-bold text-primary text-sm group-hover:text-brand transition-colors line-clamp-2">{p.name}</h3>
-                        <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{p.description}</p>
+                        <p className="text-xs text-muted-foreground mt-1 line-clamp-1">{p.description}</p>
                       </div>
                     </Link>
                   </motion.div>

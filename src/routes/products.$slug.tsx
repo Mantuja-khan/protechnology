@@ -66,15 +66,6 @@ function ProductDetail() {
             <h1 className="mt-3 text-3xl md:text-4xl font-extrabold text-primary">{product.name}</h1>
             <p className="mt-4 text-muted-foreground leading-relaxed">{product.description}</p>
 
-            <div className="mt-8 space-y-3">
-              {["Premium grade raw materials","Custom sizes & colors available","Tested for durability & performance","Bulk order discounts"].map((t) => (
-                <div key={t} className="flex gap-3 items-start">
-                  <CheckCircle2 className="h-5 w-5 text-brand mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">{t}</span>
-                </div>
-              ))}
-            </div>
-
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-brand px-6 py-3 font-semibold text-brand-foreground hover:bg-brand-dark transition-colors">
                 <Phone className="h-4 w-4" /> Request Quote
@@ -97,7 +88,7 @@ function ProductDetail() {
               {related.map((p) => (
                 <Link key={p.slug} to="/products/$slug" params={{ slug: p.slug }} className="group block rounded-xl border border-border bg-card overflow-hidden hover:border-brand hover:shadow-xl transition-all">
                   <div className="aspect-square bg-secondary overflow-hidden">
-                    <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold text-primary text-sm group-hover:text-brand transition-colors line-clamp-2">{p.name}</h3>

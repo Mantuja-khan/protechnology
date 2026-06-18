@@ -19,8 +19,8 @@ export const Route = createFileRoute("/certificates")({
 
 const certs = [
   { title: "Quality Certificate", body: "Industrial Standard Compliance Certification", image: certNew1 },
-  { title: "Safety Certificate", body: "Operational Safety & Compliance Standard", image: certNew2 },
-  { title: "Manufacturing Excellence", body: "Standard Certification of Production Excellence", image: certNew3 },
+  { title: "MSME Certificate ", body: "Manufacturing Excellence", image: certNew2 },//image bhejenge
+  { title: "Quality System Certificate ", body: "Standard Certification of Production Excellence", image: certNew3 },
 ];
 
 function CertsPage() {

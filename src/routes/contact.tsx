@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Pro Technology" },
-      { name: "description", content: "Get in touch with Pro Technology. Visit our Pune facility or contact us for quotes and inquiries." },
+      { name: "description", content: "Get in touch with Pro Technology. Visit our Bhiwadi facilities or contact us for quotes and inquiries." },
     ],
   }),
   component: Contact,
@@ -23,13 +23,13 @@ function Contact() {
       <section className="py-16">
         <div className="container-page grid md:grid-cols-3 gap-5 mb-12">
           {[
-            { 
-              icon: MapPin, 
-              title: "Visit Our Units", 
+            {
+              icon: MapPin,
+              title: "Visit Our Units",
               lines: [
-                "Unit 1 & 2: Plot No. G1-606, RIICO Ind. Area Khushkhera, Tapukara, Rajasthan - 301707",
-                "Unit 3: Plot No. 103, Sector 7, IMT Manesar, Haryana - 122051"
-              ] 
+                "Unit 1: Plot No. G1-606, RIICO Ind. Area Khushkhera, Bhiwadi - 301707",
+                "Unit 2: Khuskhera , Bhiwadi"
+              ]
             },
             { icon: Phone, title: "Call Us", lines: ["+91 97118 59853 (T R Mishra)"] },
             { icon: Mail, title: "Email Us", lines: ["protechnology49@gmail.com"] },
@@ -80,21 +80,11 @@ function Contact() {
             className="rounded-2xl overflow-hidden border border-border bg-card flex flex-col">
             <iframe
               title="Pro Technology location"
-              src="https://www.google.com/maps?q=28.1204488,76.786043&z=17&output=embed"
+              src="https://www.google.com/maps?q=28.1204488,76.786043&z=17&t=k&output=embed"
               className="w-full flex-1 min-h-[400px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="p-6 bg-primary text-primary-foreground">
-              <div className="flex gap-3 items-start">
-                <Clock className="h-5 w-5 text-brand mt-0.5" />
-                <div>
-                  <div className="font-bold">Business Hours</div>
-                  <div className="text-sm text-primary-foreground/75 mt-1">Mon-Sat: 9:00 AM - 6:30 PM</div>
-                  <div className="text-sm text-primary-foreground/75">Sunday: Closed</div>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>

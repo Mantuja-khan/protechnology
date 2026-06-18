@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — Pro Technology" },
-      { name: "description", content: "Learn about Pro Technology — over 20 years of manufacturing excellence in foam, PVC, EPDM and industrial components." },
+      { name: "description", content: "Learn about Pro Technology — over 20 years of manufacturing excellence in foam, EPDM and industrial components." },
       { property: "og:title", content: "About Pro Technology" },
       { property: "og:description", content: "20+ years of manufacturing excellence." },
     ],
@@ -29,9 +29,10 @@ function About() {
             <span className="inline-block px-3 py-1 rounded-full bg-brand/20 border border-brand/40 text-brand text-xs font-semibold tracking-wide uppercase mb-3">
               An ISO 9001:2015, IATF 16949 Certified & MSME Registered Company
             </span>
+
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary leading-tight">A Legacy of Industrial Excellence</h2>
             <p className="text-muted-foreground mt-4 leading-relaxed text-sm md:text-base">
-              Our registered office and tooling plant is located in IMT Manesar – Haryana, the upcoming ultramodern industrial town of India. Pro Technology is a professionally managed manufacturer of all types of Molds like Injection molds, Die Casting mold, and Rubber Compression Molds. Our injection molding plant is located in the Tapukara Industrial area, where we manufacture high-precision products using premium Engineering plastics raw materials.
+              Our manufacturing plants are located in the RIICO Industrial Area, Khushkhera, Bhiwadi. Pro Technology is a professionally managed manufacturer of all types of Molds like Injection molds, Die Casting molds, and Rubber Compression Molds. We manufacture high-precision products using premium Engineering plastics & rubber raw materials.
             </p>
             <p className="text-muted-foreground mt-3 leading-relaxed text-sm md:text-base">
               With a prominent customer base including Toyota, Honda 2W, Suzuki Power Train, Yamaha, Hero MotoCorp, MSIL, TVS, and Bajaj, along with various Tier-1 automotive suppliers, our team has established a strong industry reputation built on robust technical know-how.

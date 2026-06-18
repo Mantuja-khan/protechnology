@@ -18,10 +18,10 @@ export function Layout({ children }: { children: ReactNode }) {
 export function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
     <section
-      className="relative text-primary-foreground py-20 md:py-28 bg-cover bg-center"
-      style={{ backgroundImage: `url(${factoryImg})` }}
+      className="relative text-primary-foreground pt-28 pb-16 md:pt-36 md:pb-20 bg-cover bg-center"
+      style={{ backgroundImage: `url("https://i.pinimg.com/1200x/4f/3a/cd/4f3acd4833b6602c7c72dc485958d244.jpg")` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/85 to-primary/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/30" />
       <div className="container-page relative z-10">
         <h1 className="text-3xl md:text-5xl font-extrabold">{title}</h1>
         {subtitle && <p className="mt-3 text-primary-foreground/90 max-w-2xl">{subtitle}</p>}

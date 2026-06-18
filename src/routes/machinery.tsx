@@ -26,16 +26,16 @@ export const Route = createFileRoute("/machinery")({
 });
 
 const machines = [
-  { name: "Injection Molding Machines", desc: "High-precision injection molding for plastic and rubber components.", img: machineryImages[0] || machineryImg },
-  { name: "PVC Extrusion Lines", desc: "Multi-zone extrusion lines for PVC sleeves, profiles and compounds.", img: machineryImages[1] || factoryImg },
-  { name: "CNC Machining Center", desc: "Computer-controlled milling and turning for tooling and dies.", img: machineryImages[2] || machineryImg },
-  { name: "Foam Cutting & Lamination", desc: "Precision cutting, slitting and lamination for foam products.", img: machineryImages[3] || factoryImg },
-  { name: "Rubber Mixing Mill", desc: "Two-roll mixing mills for EPDM and rubber compound preparation.", img: machineryImages[4] || machineryImg },
-  { name: "Dip Moulding Plant", desc: "Automated dip moulding lines for PVC protective parts.", img: machineryImages[5] || factoryImg },
-  { name: "Quality Testing Lab", desc: "Tensile, hardness, density and dimensional testing equipment.", img: machineryImages[6] || machineryImg },
-  { name: "Wire Harness Assembly", desc: "Crimping, cutting and assembly stations for wire harness production.", img: machineryImages[7] || factoryImg },
-  { name: "Die & Tool Design", desc: "Advanced engineering and development of custom dies and tooling moulds.", img: machineryImages[8] || factoryImg },
-  { name: "Rubber Molding Press", desc: "Heavy-duty compression molding presses for reliable rubber component output.", img: machineryImages[9] || machineryImg },
+  { name: "Injection Molding Machines", desc: "High-precision injection molding for plastics components.", img: machineryImages[0] || machineryImg },
+  { name: "Iinjection molding/850T", desc: "High-precision injection molding for plastics components", img: machineryImages[1] || factoryImg },
+  { name: "Injection molding machine(90T-250T)", desc: "High-precision injection molding for plastics components", img: machineryImages[2] || machineryImg },
+  { name: "Rubber Compression moding machine", desc: "High Precision rubber compressor moding machine.  ", img: machineryImages[3] || factoryImg },
+  { name: "PVC Extrusion Line", desc: "Two-roll mixing mills for EPDM and rubber compound preparation.", img: machineryImages[4] || machineryImg },
+  // { name: "Dip Moulding Plant", desc: "Automated dip moulding lines for PVC protective parts.", img: machineryImages[5] || factoryImg },
+  { name: "Half Die cut Machine ", desc: "", img: machineryImages[6] || machineryImg },
+  { name: "Power Press 5T-100T", desc: "", img: machineryImages[7] || factoryImg },
+  { name: "Plastic Injection molding machine /angle", desc: "", img: machineryImages[8] || factoryImg },
+  { name: "High Precision injection molding machien", desc: "", img: machineryImages[9] || machineryImg },
 ];
 
 function MachineryPage() {
