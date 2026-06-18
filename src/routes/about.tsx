@@ -22,9 +22,9 @@ function About() {
       <PageHero title="About Pro Technology" subtitle="Engineering strength. Delivering precision. Over two decades of manufacturing excellence." />
 
       <section className="py-20">
-        <div className="container-page grid md:grid-cols-2 gap-12 items-center">
+        <div className="container-page grid md:grid-cols-2 gap-12 items-stretch">
           <motion.img initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-            src={factoryImg} alt="Pro Technology facility" loading="lazy" width={1280} height={800} className="rounded-2xl shadow-xl" />
+            src="https://i.pinimg.com/1200x/f5/7c/a4/f57ca4dd2f67054b535d818895edfa19.jpg" alt="Pro Technology facility" loading="lazy" width={1280} height={800} className="rounded-2xl shadow-xl w-full h-full object-cover" />
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <span className="inline-block px-3 py-1 rounded-full bg-brand/20 border border-brand/40 text-brand text-xs font-semibold tracking-wide uppercase mb-3">
               An ISO 9001:2015, IATF 16949 Certified & MSME Registered Company

@@ -214,8 +214,8 @@ function Home() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-secondary/40">
-        <div className="container-page grid md:grid-cols-2 gap-12 items-center">
-          <motion.img {...fadeUp} src={factoryImg} alt="Our manufacturing facility" loading="lazy" width={1280} height={800} className="rounded-2xl shadow-xl" />
+        <div className="container-page grid md:grid-cols-2 gap-12 items-stretch">
+          <motion.img {...fadeUp} src="https://i.pinimg.com/1200x/f5/7c/a4/f57ca4dd2f67054b535d818895edfa19.jpg" alt="Our manufacturing facility" loading="lazy" width={1280} height={800} className="rounded-2xl shadow-xl w-full h-full object-cover" />
           <motion.div {...fadeUp}>
             <p className="text-brand font-semibold uppercase text-sm tracking-wider">About Pro Technology</p>
             <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Engineering Strength. Delivering Precision.</h2>
@@ -226,14 +226,6 @@ function Home() {
             <p className="text-muted-foreground mt-3 leading-relaxed text-sm md:text-base">
               Backed by strong technical know-how, state-of-the-art infrastructure, and a reliable vendor base, we serve a prominent customer base including Toyota, Honda 2W, Suzuki Power Train, Yamaha, Hero MotoCorp, MSIL, TVS, and Bajaj.
             </p>
-            <ul className="space-y-3 mt-6">
-              {["ISO 9001:2015 Certified Manufacturer", "In-house R&D and Quality Lab", "On-time delivery across India & exports", "Custom formulations & OEM solutions"].map((t) => (
-                <li key={t} className="flex gap-3 items-start">
-                  <CheckCircle2 className="h-5 w-5 text-brand mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">{t}</span>
-                </li>
-              ))}
-            </ul>
             <Link to="/about" className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary text-primary-foreground px-6 py-3 font-semibold hover:bg-primary/90 transition-colors">
               Learn More About Us <ArrowRight className="h-4 w-4" />
             </Link>
