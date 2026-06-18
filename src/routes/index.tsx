@@ -241,25 +241,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Clients & Partners Marquee */}
-      <section className="py-16 bg-background">
-        <div className="container-page">
-          <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-10">
-            <p className="text-brand font-semibold uppercase text-sm tracking-wider">Trusted By</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-primary mt-2">Our Clients</h2>
-            <p className="text-muted-foreground mt-3">Industry leaders who rely on Pro Technology for precision components.</p>
-          </motion.div>
-          <Marquee
-            direction="left"
-            speed={35}
-            items={[
-              "Toyota", "Honda 2W", "Suzuki Power Train", "Yamaha", "Hero MotoCorp",
-              "MSIL", "TVS", "Bajaj", "Tata Motors", "Mahindra", "Volkswagen",
-              "JCB India", "Force Motors"
-            ]}
-          />
-        </div>
-      </section>
+
 
       {/* Tool Room Business Partners Marquee */}
       <section className="py-16 bg-secondary/40">
